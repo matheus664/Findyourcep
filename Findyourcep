@@ -1,0 +1,7 @@
+import requests
+
+ent_cep = input('Digite o Cep:')
+
+r = requests.get("https://cdn.apicep.com/file/apicep/%s.json" % ent_cep)
+resposta = r.json()
+print("Resposta:%s" % resposta)
